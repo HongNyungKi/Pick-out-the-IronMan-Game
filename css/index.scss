@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+body {
+    background: gray;
+
+    .game {
+        text-align: center;
+        margin: auto;
+        background: url("../img/GalaxyBackground.jpg") center/cover;
+        width: 1000px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        margin-top: 20px;
+        box-shadow: 6px 7px 14px 1px rgba(0, 0, 0, 0.75);
+
+        .game__header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+
+            .header__btn {
+                width: 65px;
+                height: 65px;
+                background: wheat;
+                border: 4px solid black;
+                font-size: 25px;
+                transition: all 100ms ease-in;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .header__time {
+                width: 100px;
+                background: white;
+                text-align: center;
+                border: 4px solid black;
+                font-size: 32px;
+                margin-top: 10px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                visibility: hidden;
+                user-select: none;
+                cursor: auto;
+            }
+
+            .header__score {
+                width: 55px;
+                height: 55px;
+                font-size: 40px;
+                background: darksalmon;
+                color: white;
+                border-radius: 50%;
+                margin-top: 10px;
+                border: 3px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                visibility: hidden;
+                user-select: none;
+                cursor: auto;
+            }
+        }
+
+        .game__field {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            img {
+                transition: all 100ms ease-in;
+            }
+
+            .IronMan:hover,
+            .hero:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .pop-up {
+        text-align: center;
+        margin: auto;
+        width: 500px;
+        height: 250px;
+        background: #00000090;
+        border-radius: 20px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-150%);
+
+        .pop-up__refresh {
+            width: 70px;
+            height: 70px;
+            font-size: 25px;
+            background: wheat;
+            border: 2px solid black;
+            border-radius: 50%;
+            transition: all 100ms ease-in;
+
+            &:hover {
+                transform: rotate(45deg) scale(1.1);
+            }
+        }
+
+        .pop-up__message {
+            font-size: 35px;
+            margin-top: 10px;
+        }
+    }
+
+    .pop-up--hide {
+        display: none;
+    }
+}
